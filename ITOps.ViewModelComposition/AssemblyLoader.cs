@@ -1,11 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyModel;
-using System.Linq;
+using System;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Runtime.Loader;
-using System;
 
-namespace ITOps.ViewModelComposition
+namespace ServiceComposer.ViewModelComposition
 {
     public static class AssemblyLoader
     {

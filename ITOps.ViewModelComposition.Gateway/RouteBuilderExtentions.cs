@@ -8,7 +8,7 @@ using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ITOps.ViewModelComposition.Gateway
+namespace ServiceComposer.ViewModelComposition.Gateway
 {
     public static class RouteBuilderExtentions
     {
