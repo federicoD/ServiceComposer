@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
 
-namespace ServiceComposer.ViewModelComposition.Json
+namespace ServiceComposer.Json
 {
     public class CamelCaseToPascalSettings
     {

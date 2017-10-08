@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.Loader;
 
-namespace ServiceComposer.ViewModelComposition
+namespace ServiceComposer
 {
     public static class AssemblyLoader
     {

@@ -6,12 +6,12 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace ServiceComposer.ViewModelComposition.Mvc
+namespace ServiceComposer.AspNetMvc
 {
-    public static class MvcBuilderExtensions
+    public static class AspNetMvcBuilderExtensions
     {
         public static IMvcBuilder AddViewModelCompositionMvcSupport(this IMvcBuilder builder)
-            => AddViewModelCompositionMvcSupport(builder, "*ViewModelComposition*.dll");
+            => AddViewModelCompositionMvcSupport(builder, "*.dll");
 
         public static IMvcBuilder AddViewModelCompositionMvcSupport(this IMvcBuilder builder, string assemblySearchPattern)
         {

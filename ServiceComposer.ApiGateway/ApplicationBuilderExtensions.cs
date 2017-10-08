@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Routing;
 using System;
 using System.Threading.Tasks;
 
-namespace ServiceComposer.ViewModelComposition.Gateway
+namespace ServiceComposer.ApiGateway
 {
     public static class ApplicationBuilderExtensions
     {
-        public static void RunCompositionGateway(this IApplicationBuilder app, Action<IRouteBuilder> routes = null)
+        public static void RunCompositionApiGateway(this IApplicationBuilder app, Action<IRouteBuilder> routes = null)
         {
             var routeBuilder = new RouteBuilder(app);
             routes?.Invoke(routeBuilder);
@@ -16,9 +16,9 @@ namespace ServiceComposer.ViewModelComposition.Gateway
             app.UseRouter(routeBuilder.Build());
         }
 
-        public static void RunCompositionGatewayWithDefaultRoutes(this IApplicationBuilder app)
+        public static void RunCompositionApiGatewayWithDefaultRoutes(this IApplicationBuilder app)
         {
-            app.RunCompositionGateway(routes =>
+            app.RunCompositionApiGateway(routes =>
             {
                 routes.MapComposableGet( template: "{controller}/{id:int?}");
                 routes.MapRoute("{*NotFound}", context =>

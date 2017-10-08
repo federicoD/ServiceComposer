@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Routing;
 using System.Threading.Tasks;
 
-namespace ServiceComposer.ViewModelComposition
+namespace ServiceComposer
 {
     public interface IHandleRequests : IInterceptRoutes
     {

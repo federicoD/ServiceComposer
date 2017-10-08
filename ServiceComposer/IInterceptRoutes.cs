@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 
-namespace ServiceComposer.ViewModelComposition
+namespace ServiceComposer
 {
     public interface IInterceptRoutes
     {

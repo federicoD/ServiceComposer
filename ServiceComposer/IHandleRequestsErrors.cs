@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Routing;
 using System;
 using System.Threading.Tasks;
 
-namespace ServiceComposer.ViewModelComposition
+namespace ServiceComposer
 {
     public interface IHandleRequestsErrors
     {

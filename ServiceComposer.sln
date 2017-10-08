@@ -2,13 +2,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceComposer.ViewModelComposition", "ServiceComposer.ViewModelComposition\ServiceComposer.ViewModelComposition.csproj", "{C1796DD0-C5DB-4FC9-A0A2-6EFE8D825369}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceComposer", "ServiceComposer\ServiceComposer.csproj", "{C1796DD0-C5DB-4FC9-A0A2-6EFE8D825369}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceComposer.ViewModelComposition.Json", "ServiceComposer.ViewModelComposition.Json\ServiceComposer.ViewModelComposition.Json.csproj", "{C0305AD8-052C-493A-9036-44511B901A52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceComposer.Json", "ServiceComposer.Json\ServiceComposer.Json.csproj", "{C0305AD8-052C-493A-9036-44511B901A52}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceComposer.ViewModelComposition.Gateway", "ServiceComposer.ViewModelComposition.Gateway\ServiceComposer.ViewModelComposition.Gateway.csproj", "{FF983839-A4C5-46E9-9511-6A2A9FA326F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceComposer.ApiGateway", "ServiceComposer.ApiGateway\ServiceComposer.ApiGateway.csproj", "{FF983839-A4C5-46E9-9511-6A2A9FA326F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceComposer.ViewModelComposition.Mvc", "ServiceComposer.ViewModelComposition.Mvc\ServiceComposer.ViewModelComposition.Mvc.csproj", "{98F40364-2A2A-454F-AFC3-933D7CE2D342}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceComposer.AspNetMvc", "ServiceComposer.AspNetMvc\ServiceComposer.AspNetMvc.csproj", "{98F40364-2A2A-454F-AFC3-933D7CE2D342}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

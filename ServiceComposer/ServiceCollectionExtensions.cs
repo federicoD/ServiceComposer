@@ -5,12 +5,12 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace ServiceComposer.ViewModelComposition
+namespace ServiceComposer
 {
     public static class ServiceCollectionExtensions
     {
         public static void AddViewModelComposition(this IServiceCollection services) 
-            => AddViewModelComposition(services, "*ViewModelComposition*.dll");
+            => AddViewModelComposition(services, "*.dll");
 
         public static void AddViewModelComposition(this IServiceCollection services, string assemblySearchPattern)
         {

@@ -1,4 +1,4 @@
-﻿namespace ServiceComposer.ViewModelComposition.Json
+﻿namespace ServiceComposer.Json
 {
     public static class StringExtensions
     {

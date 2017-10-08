@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Globalization;
 
-namespace ServiceComposer.ViewModelComposition.Json
+namespace ServiceComposer.Json
 {
     public class CamelCaseToPascalCaseExpandoObjectConverter : JsonConverter
     {

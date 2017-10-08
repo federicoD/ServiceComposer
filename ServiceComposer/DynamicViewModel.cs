@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Threading.Tasks;
 
-namespace ServiceComposer.ViewModelComposition
+namespace ServiceComposer
 {
     class DynamicViewModel : DynamicObject, ISubscriptionStorage
     {

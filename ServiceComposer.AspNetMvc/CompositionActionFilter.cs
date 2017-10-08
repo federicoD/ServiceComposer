@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ServiceComposer.ViewModelComposition.Mvc
+namespace ServiceComposer.AspNetMvc
 {
     class CompositionActionFilter : IAsyncResultFilter
     {
@@ -53,7 +53,7 @@ namespace ServiceComposer.ViewModelComposition.Mvc
                 }
                 else if (context.Result is ObjectResult objectResult && objectResult.Value == null)
                 {
-                    //when result is ObjectResult no view will be looked up, result will be serialized (like WebAPI did)
+                    //when result is ObjectResult no view will be looked up, result will be serialized (like WebAPI used to do)
                     if (statusCode == StatusCodes.Status200OK)
                     {
                         objectResult.Value = viewModel;
