@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ServiceComposer.Json
 {
-    public class CamelCaseToPascalSettings
+    class CamelCaseToPascalSettings
     {
         static JsonSerializerSettings settings;
 

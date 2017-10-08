@@ -122,6 +122,7 @@ namespace ServiceComposer.ApiGateway
             var result = await CompositionHandler.HandleRequest(context);
             if (result.StatusCode == StatusCodes.Status200OK)
             {
+                //TODO: should support Accept header
                 string json = JsonConvert.SerializeObject(result.ViewModel, GetSettings(context));
                 context.Response.ContentType = "application/json; charset=utf-8";
                 await context.Response.WriteAsync(json);

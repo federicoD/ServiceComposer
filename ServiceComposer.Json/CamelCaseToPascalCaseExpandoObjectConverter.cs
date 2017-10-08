@@ -6,11 +6,8 @@ using System.Globalization;
 
 namespace ServiceComposer.Json
 {
-    public class CamelCaseToPascalCaseExpandoObjectConverter : JsonConverter
+    class CamelCaseToPascalCaseExpandoObjectConverter : JsonConverter
     {
-        //CHANGED
-        //the ExpandoObjectConverter needs this internal method so we have to copy it
-        //from JsonReader.cs
         internal static bool IsPrimitiveToken(JsonToken token)
         {
             switch (token)
@@ -58,7 +55,9 @@ namespace ServiceComposer.Json
             while (reader.TokenType == JsonToken.Comment)
             {
                 if (!reader.Read())
+                {
                     throw new Exception("Unexpected end.");
+                }
             }
 
             switch (reader.TokenType)
@@ -68,20 +67,17 @@ namespace ServiceComposer.Json
                 case JsonToken.StartArray:
                     return ReadList(reader);
                 default:
-                    //CHANGED
-                    //call to static method declared inside this class
                     if (IsPrimitiveToken(reader.TokenType))
+                    {
                         return reader.Value;
-
-                    //CHANGED
-                    //Use string.format instead of some util function declared inside JSON.NET
+                    }
                     throw new Exception(string.Format(CultureInfo.InvariantCulture, "Unexpected token when converting ExpandoObject: {0}", reader.TokenType));
             }
         }
 
         private object ReadList(JsonReader reader)
         {
-            IList<object> list = new List<object>();
+            var list = new List<object>();
 
             while (reader.Read())
             {
@@ -90,8 +86,7 @@ namespace ServiceComposer.Json
                     case JsonToken.Comment:
                         break;
                     default:
-                        object v = ReadValue(reader);
-
+                        var v = ReadValue(reader);
                         list.Add(v);
                         break;
                     case JsonToken.EndArray:
@@ -111,14 +106,13 @@ namespace ServiceComposer.Json
                 switch (reader.TokenType)
                 {
                     case JsonToken.PropertyName:
-                        //CHANGED
-                        //added call to ToPascalCase extension method
-                        string propertyName = reader.Value.ToString().ToPascalCase();
+                        var propertyName = reader.Value.ToString().ToPascalCase();
 
                         if (!reader.Read())
+                        {
                             throw new Exception("Unexpected end.");
-
-                        object v = ReadValue(reader);
+                        }
+                        var v = ReadValue(reader);
 
                         expandoObject[propertyName] = v;
                         break;
